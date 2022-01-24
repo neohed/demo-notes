@@ -29,11 +29,16 @@ while (word = keyIterator.next().value) {
 }
 
 // Sort by frequency descending
-frequencies.sort(([,first], [,second]) => second - first)
+frequencies.sort(
+    ([,first], [,second]) => second - first
+)
 
 // Get top letters
 const wordNumber = 2;
-const topLetters = frequencies.slice(0, wordNumber * 5).map(([letter]) => letter).join('');
+const topLetters = frequencies
+    .slice(0, wordNumber * 5)
+    .map(([letter]) => letter)
+    .join('');
 
 console.log(topLetters)
 
